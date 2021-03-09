@@ -33,9 +33,9 @@ RUN set -ex \
     && bash /tmp/scripts/terraform-docs-debian.sh "${TERRAFORMDOCSVERSION}"
 
 # add extras
-# RUN set -ex \
+RUN set -ex \
     # https://github.com/vinnie357/devcontainers/tree/main/scripts-library/ubuntu
-    # && bash /tmp/scripts/my-script.sh
+    && bash /tmp/scripts/vesctl-debian.sh "${VESCTL_VERSION}"
 
 # Clean up
 RUN set -ex \

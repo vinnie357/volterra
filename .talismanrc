@@ -1,3 +1,5 @@
 fileignoreconfig:
 - filename: .devcontainer/scripts/docker-debian.sh
   checksum: 3109be3be53c3dad4a7cfcd0c07c87cd41ab26cc24e1fd4110fe69ecb955ae9a
+- filename: terraform/vlad/main.tf
+  checksum: 44e164f0f0bd86c0360e62b1d02367fd4400cac3dc8e5a675fba29d328f6aced
