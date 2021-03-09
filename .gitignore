@@ -1,6 +1,10 @@
+# volterra
+*.p12
+# project
+admin.auto.tfvars
 # Local .terraform directories
 **/.terraform/*
-
+.terraform.lock.hcl
 # .tfstate files
 *.tfstate
 *.tfstate.*

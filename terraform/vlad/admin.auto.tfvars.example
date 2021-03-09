@@ -1,0 +1,8 @@
+# volterra
+volterra_p12_path  = "./myaccount.console.ves.volterra.io.api-creds.p12"
+volterra_namespace = "mynamespace"
+# aws
+aws_access_key_id     = ""
+aws_secret_access_key = ""
+# admin
+ssh_public_key = "ssh-rsa AAAA"
