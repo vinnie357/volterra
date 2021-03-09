@@ -9,6 +9,10 @@ includes:
 - terraform
 - terraform-docs
 - vesctl
+- kubectl
+- helm
+- awscli
+- awsiam
 ## Development
 
 don't forget to add your git user config
@@ -26,3 +30,13 @@ testing pre-commit hooks:
   pre-commit run -a -v
   ```
 ---
+
+## Troubleshooting
+
+testing services inside a cluster
+
+```bash
+kubectl run multitool --image=praqma/network-multitool
+toolPod=$(kubectl get pods -o json | jq -r ".items[].metadata | select(.name | contains (\"multitool\")).name")
+kubectl exec -it $toolPod --  bash
+```

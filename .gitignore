@@ -1,5 +1,6 @@
 # volterra
 *.p12
+*kubeconfig*
 # project
 admin.auto.tfvars
 # Local .terraform directories

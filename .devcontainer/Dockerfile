@@ -32,10 +32,13 @@ RUN set -ex \
     && bash /tmp/scripts/terraform-debian.sh "${TERRAFORMVERSION}" \
     && bash /tmp/scripts/terraform-docs-debian.sh "${TERRAFORMDOCSVERSION}"
 
-# add extras
+# add extras vesctl,helm,kubectl,awscli,awsiam
 RUN set -ex \
     # https://github.com/vinnie357/devcontainers/tree/main/scripts-library/ubuntu
-    && bash /tmp/scripts/vesctl-debian.sh "${VESCTL_VERSION}"
+    && bash /tmp/scripts/vesctl-debian.sh "${VESCTL_VERSION}" \
+    && bash /tmp/scripts/kubectl-helm-debian.sh \
+    && bash /tmp/scripts/awscli-debian.sh \
+    && bash /tmp/scripts/awsiam-debian.sh "${USERNAME}"
 
 # Clean up
 RUN set -ex \
